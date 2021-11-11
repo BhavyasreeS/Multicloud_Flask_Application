@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <h3 style="text-align:center" >Cost Analysis for Pi estimation</h3>
+  </head>
+  <body>
+    <h3>Final Pi estimate: {{pi}}</h3>
+    <h3>Cost:{{cost}}</h3>
+    <h3 style="text-align:center" >Plot showing estimated value vs shots</h3>
+    <div class="rightalign"> <img src="https://image-charts.com/chart?cht=lc&chxt=y&chxr=0,3.13,3.15&chd=a:{{ y }}|{{ y1 }}&chs=600x400&chco=00FF00,0000FFFF" classed="displayed" alt="Graph: no internet connection." align="center" />
+    
+    <h3 style="text-align:center" >Incircle and shot values per Q</h3>
+    <div id="tab">
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+    </div>
+  </body>
+</html>
+

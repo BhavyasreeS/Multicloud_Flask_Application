@@ -1,0 +1,32 @@
+<div id="down">
+	<h2>Enter the values</h2>
+	<form id="stats" method="post" action="/estimate">
+		 <label for="service"><h4>Choose a scalable service:</h4></label>
+  			<select name="service">
+    				<option value="lambda">Lambda</option>
+    				<option value="ec2">EC2</option>
+  			</select>
+		<h4>No: of Resources (R):<input type="number" name="parallel-resources"/><br/></h4>
+		<h4>No: of digits (D):<input type="number" name="digits"/><br/></h4>
+		<h4>No: of shots (S):<input type="number" name="shots" ></h4>
+		<h4>Reporting rate (q):<input type="number" name="q" ></h4>
+		
+		<h4><input type="submit" name="submit" value="Submit" />
+		<input type="submit" name='reset' value="Reset" onclick="window.location='/';return false;" /><br/></h4>
+	</form>
+	<form id="terminate" method="post" action="/terminate">
+			<h4>Terminate instances:<input type="submit" name="submit" value="Terminate" /></h4>
+		</form>
+	{% if note %}
+	<h3 style="color: #11FFFF">
+		{{ note }}
+	</h3>
+	{% endif %}
+	
+	{% if note1 %}
+	<h3 style="color: #11FFFF">
+		{{ note1 }}
+	</h3>
+	{% endif %}
+	
+</div>

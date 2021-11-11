@@ -1,0 +1,18 @@
+{% extends "_base.htm" %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block pageblock %}
+	<div id="up">
+		<h1 style="text-align:center" >Serverless web application for Cost of estimating Pi<br/><br/></h1>
+		<h4>Please click here to access history</h4>
+		
+		<form id="stats" method="post" action="/history">
+			<h4><input type="submit" name="submit" value="History" />
+		</form>
+	</div>
+{% include 'form.htm' %}
+
+{% endblock %}

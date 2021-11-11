@@ -1,0 +1,19 @@
+{% extends "_base.htm" %}
+
+{% block title %}
+	History
+{% endblock %}
+
+{% block pageblock %}
+
+	<div id="up">
+		<h1>History from all the previous runs<br/></h1>
+		<h3><a href="index.htm">Home</a>.</h3>
+	</div>
+	<div id="curve_chart"></div>
+		{% for table in tables %}
+			{{ table|safe }}
+		{% endfor %}
+	
+	
+{% endblock %}
